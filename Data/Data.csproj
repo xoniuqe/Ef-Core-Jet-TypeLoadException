@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFrameworkCore.Jet.OleDb" Version="3.1.0-alpha.3" />
+    <PackageReference Include="System.Data.OleDb" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
