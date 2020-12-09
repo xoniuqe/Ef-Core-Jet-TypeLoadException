@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EntityFrameworkCore.Jet.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreJetTesst.Model
 {
@@ -16,10 +17,10 @@ namespace EFCoreJetTesst.Model
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var dbPath = "\\test.mdb";
+            var dbPath = "test.mdb";
             var connectionString =
-                "Provider=Microsoft.Jet.OLEDB.4.0;Jet OLEDB:Engine Type=5;User ID=Admin; Data Source=\"{0}\";OLE DB Services = 0;Mode=Share Deny None;Jet OLEDB:Database Password=\"PASSWORD\";";
-            optionsBuilder.UseJetOleDb(string.Format(connectionString, dbPath));
+                "Provider=Microsoft.Jet.OLEDB.4.0;Jet OLEDB:Engine Type=5;User ID=Admin; Data Source='{0}';OLE DB Services = 0;Mode=Share Deny None;Jet OLEDB:Database Password='PASSWORD';";
+            optionsBuilder.UseJet(string.Format(connectionString, dbPath), DataAccessProviderType.OleDb);
 
         }
 

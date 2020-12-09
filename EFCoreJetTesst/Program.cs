@@ -9,8 +9,8 @@ namespace EFCoreJetTesst
     {
         static void Main(string[] args)
         {
-            var lAsb = Assembly.Load("System.Data.OleDb");
-            var lType = Type.GetType("System.Data.OleDb.OleDbFactory, System.Data.OleDb");
+            //  var lAsb = Assembly.Load("System.Data.OleDb");
+            //  var lType = Type.GetType("System.Data.OleDb.OleDbFactory, System.Data.OleDb");
             Console.WriteLine("Hello World!");
             using (var context = new ModelContext())
             {
